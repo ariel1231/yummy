@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'yummy';
+
+  navPage = '';
+
+  constructor() {}
+
+  onNavSelectionReceived(navItem: string) {
+    // console.log(navItem);
+    this.navPage = navItem;
+  }
 }

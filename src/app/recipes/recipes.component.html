@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-5">
+    <!-- <app-recipe-list (select)="onSelectionReceived($event)">
+    </app-recipe-list> can be replaced by a simpler logic-->
+    <app-recipe-list (selected)="currentSelectionItem = $event">
+    </app-recipe-list>
+
+  </div>
+  <div class="col-md-5">
+    <app-recipe-detail  *ngIf="currentSelectionItem; else displayDetail"
+                        [recipeToDisplay]="currentSelectionItem">
+    </app-recipe-detail>
+    <ng-template #displayDetail>
+      <h3>Click on the recipe for more details.</h3>
+    </ng-template>
+  </div>
+</div>
