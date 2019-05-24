@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  onRecipesSelected(){
+  onRecipesSelected() {
     //console.log('Recipes Selected!');
     this.ItemSelected.emit('Recipes');
 
